@@ -18,7 +18,7 @@ namespace Engine
             Solver::LSolve(A, temp, x, n);
             for (int i = 0; i < n; i++)
                 x[i] = std::max(0.0, x[i]);
-        }
+        }     
     }
 
     void Solver::choleskySolve(double *A, double *b, double *x, int n)
@@ -61,8 +61,8 @@ namespace Engine
             x[i] = (y[i] - sum) / L[i][i];
         }
     }
-
-    void Solver::LSolve(double *L, double *b, double *x, int n)
+ 
+    void Solver::LSolve(double *L, double *b, double *x, int n) // test
     {
         for (int i = 0; i < n; ++i)
         {
